@@ -121,11 +121,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
-    }
-
     public void TakeHit()
     {
         if (state == PlayerState.JELLY) {
