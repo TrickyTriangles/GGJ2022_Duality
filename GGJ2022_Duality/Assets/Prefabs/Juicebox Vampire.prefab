@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8388272569348162868}
   - component: {fileID: 3270231663006968744}
   - component: {fileID: 710193290509466286}
-  - component: {fileID: 1742322800357161955}
   m_Layer: 8
   m_Name: DamageArea
   m_TagString: Untagged
@@ -77,27 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdac1abdb22eb24f937bb3d1a4eb051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &1742322800357161955
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835444741549194427}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &7224945480677005612
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +86,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7224945480677005603}
   - component: {fileID: 7224945480677005602}
+  - component: {fileID: 1965071723}
+  - component: {fileID: 1965071722}
   m_Layer: 8
   m_Name: Juicebox Vampire
   m_TagString: Untagged
@@ -145,8 +125,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   positions:
-  - {x: 4.45, y: -2.39, z: 0}
-  - {x: 13.19, y: -2.39, z: 0}
+  - {x: 7.26, y: -2.39, z: 0}
+  - {x: 1.76, y: -2.39, z: 0}
+--- !u!50 &1965071723
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224945480677005612}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1965071722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224945480677005612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc014327a3b86e41880238cea75bbe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7224945480855230469
 GameObject:
   m_ObjectHideFlags: 0

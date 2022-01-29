@@ -20,6 +20,7 @@ public class JuiceboxVampire : MonoBehaviour, ICollisionHandler
     {
         if (colliderName == "DamageArea" && other.tag == "Player")
         {
+            Debug.Log("Juicebox Vampire triggered with player");
             other.GetComponent<PlayerController>().TakeHit();
         }
     }
