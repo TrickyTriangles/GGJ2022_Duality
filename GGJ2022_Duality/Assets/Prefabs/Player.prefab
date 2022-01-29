@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230678157775416112}
   - component: {fileID: 1230678157775416115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JellyForm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -68,10 +68,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 975586969
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cac818ffa407c3c408d3dcb697d04765, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c623903ee6c1a34409b81bf1d5ee0e74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5560666279567707774}
   - component: {fileID: 3575406231914234643}
   - component: {fileID: 3615742500317451593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 1230678159061510645}
   - component: {fileID: 1230678159061510644}
   - component: {fileID: 4800252176221240287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpikeForm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -247,8 +247,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 319254141
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b05dab3c016aa6e4291042854e548f3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
