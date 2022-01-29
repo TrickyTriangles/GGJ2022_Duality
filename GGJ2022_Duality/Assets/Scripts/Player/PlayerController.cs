@@ -101,7 +101,15 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+    }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (state == PlayerState.SPIKE)
         {
             ISpikeHittable spikeHittable = collision.gameObject.GetComponent<ISpikeHittable>();
