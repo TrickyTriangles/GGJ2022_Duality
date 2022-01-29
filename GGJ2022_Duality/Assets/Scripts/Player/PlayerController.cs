@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spikeForm;
     [SerializeField] private CircleCollider2D mainCollider;
     [SerializeField] private CircleCollider2D spikeCollider;
+    [SerializeField] private GrateDetector grateDetector;
 
     [Header("Game Values")]
     [SerializeField] private float moveForce = 100f;
@@ -57,12 +58,21 @@ public class PlayerController : MonoBehaviour
             HandleJump(); 
         }
 
+        if (!grateDetector.isTouchingGrate)
+        {
+            HandleFormChange();
+        }
+    }
+
+    private void HandleFormChange()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
             state = PlayerState.SPIKE;
             jellyForm.SetActive(false);
             spikeForm.SetActive(true);
             myRigidbody.sharedMaterial = spikeMaterial;
+            gameObject.layer = LayerMask.NameToLayer("Spike");
         }
         else
         {
@@ -70,6 +80,7 @@ public class PlayerController : MonoBehaviour
             jellyForm.SetActive(true);
             spikeForm.SetActive(false);
             myRigidbody.sharedMaterial = jellyMaterial;
+            gameObject.layer = LayerMask.NameToLayer("Player");
         }
     }
 
@@ -82,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {
-                myRigidbody?.AddForce(direction.normalized * jumpForce);
+                myRigidbody?.AddForce(-direction.normalized * jumpForce);
             }
         }
     }
@@ -90,6 +101,16 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+
+        if (state == PlayerState.SPIKE)
+        {
+            ISpikeHittable spikeHittable = collision.gameObject.GetComponent<ISpikeHittable>();
+
+            if (spikeHittable != null)
+            {
+                spikeHittable.Hit();
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
