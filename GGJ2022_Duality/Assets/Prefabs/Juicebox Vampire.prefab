@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3270231663006968744}
   - component: {fileID: 710193290509466286}
   - component: {fileID: 1742322800357161955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DamageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7224945480677005603}
   - component: {fileID: 7224945480677005602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Juicebox Vampire
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7224945480855230468}
   - component: {fileID: 7224945480855230491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Temp Juicebox Vampire Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
