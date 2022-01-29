@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {
-                myRigidbody?.AddForce(direction.normalized * jumpForce);
+                myRigidbody?.AddForce(-direction.normalized * jumpForce);
             }
         }
     }

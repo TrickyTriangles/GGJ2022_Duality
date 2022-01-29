@@ -174,7 +174,7 @@ MonoBehaviour:
   spikeCollider: {fileID: 4800252176221240287}
   grateDetector: {fileID: 3008390386084806214}
   moveForce: 200
-  jumpForce: 500
+  jumpForce: 400
   jellyMaterial: {fileID: 6200000, guid: e2f3fb9035f91e04794e12f1827409f8, type: 2}
   spikeMaterial: {fileID: 6200000, guid: 05b7d41b7a3fb3f4f95ae9045fdd7c6c, type: 2}
   jumpLayers:
