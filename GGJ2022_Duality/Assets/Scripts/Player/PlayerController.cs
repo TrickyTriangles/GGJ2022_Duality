@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spikeForm;
     [SerializeField] private CircleCollider2D mainCollider;
     [SerializeField] private CircleCollider2D spikeCollider;
+    [SerializeField] private GrateDetector grateDetector;
 
     [Header("Game Values")]
     [SerializeField] private float moveForce = 100f;
@@ -57,12 +58,21 @@ public class PlayerController : MonoBehaviour
             HandleJump(); 
         }
 
+        if (!grateDetector.isTouchingGrate)
+        {
+            HandleFormChange();
+        }
+    }
+
+    private void HandleFormChange()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
             state = PlayerState.SPIKE;
             jellyForm.SetActive(false);
             spikeForm.SetActive(true);
             myRigidbody.sharedMaterial = spikeMaterial;
+            gameObject.layer = LayerMask.NameToLayer("Spike");
         }
         else
         {
@@ -70,6 +80,7 @@ public class PlayerController : MonoBehaviour
             jellyForm.SetActive(true);
             spikeForm.SetActive(false);
             myRigidbody.sharedMaterial = jellyMaterial;
+            gameObject.layer = LayerMask.NameToLayer("Player");
         }
     }
 
