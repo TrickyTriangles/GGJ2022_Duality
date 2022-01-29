@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CircleCollider2D mainCollider;
     [SerializeField] private CircleCollider2D spikeCollider;
     [SerializeField] private GrateDetector grateDetector;
+    [SerializeField] private Animator jellyAnimator;
 
     [Header("Game Values")]
     [SerializeField] private float moveForce = 100f;
@@ -121,17 +122,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
-    }
-
-    public void TakeHit()
+    public boolean TakeHit()
     {
         if (state == PlayerState.JELLY) {
-            // take damage
+            // take damage or die
+            return true;
         } else {
             // do damage
+            return false;
         }
     }
 
