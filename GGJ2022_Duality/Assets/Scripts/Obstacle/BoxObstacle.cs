@@ -10,13 +10,15 @@ public class BoxObstacle : MonoBehaviour, ISpikeHittable
 
     void ISpikeHittable.Hit()
     {
+        rb.mass = 0.1f;
+        rb.AddForce(new Vector2(Random.Range(-100f, 100f), Random.Range(-100f, 100f)));
         gameObject.layer = LayerMask.NameToLayer("Particle");
         StartCoroutine(FadeOutRoutine());
     }
 
     private IEnumerator FadeOutRoutine()
     {
-        Color currentColor = new Color(1f, 1f, 1f, 1f);
+        Color currentColor = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
         float timer = 0f;
 
         while (timer < fadeoutTime)
