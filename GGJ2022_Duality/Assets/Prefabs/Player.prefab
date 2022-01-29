@@ -91,8 +91,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1230678158645469258}
-  - component: {fileID: 5560666279567707774}
   - component: {fileID: 3575406231914234643}
+  - component: {fileID: 5560666279567707774}
   - component: {fileID: 3615742500317451593}
   m_Layer: 7
   m_Name: Player
@@ -114,25 +114,10 @@ Transform:
   m_Children:
   - {fileID: 1230678157775416112}
   - {fileID: 1230678159061510645}
+  - {fileID: 618219351976722764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &5560666279567707774
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230678158645469259}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: e2f3fb9035f91e04794e12f1827409f8, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.78
 --- !u!50 &3575406231914234643
 Rigidbody2D:
   serializedVersion: 4
@@ -154,6 +139,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!58 &5560666279567707774
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230678158645469259}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e2f3fb9035f91e04794e12f1827409f8, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.78
 --- !u!114 &3615742500317451593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +172,9 @@ MonoBehaviour:
   spikeForm: {fileID: 1230678159061510650}
   mainCollider: {fileID: 5560666279567707774}
   spikeCollider: {fileID: 4800252176221240287}
+  grateDetector: {fileID: 3008390386084806214}
   moveForce: 200
-  jumpForce: 500
+  jumpForce: 400
   jellyMaterial: {fileID: 6200000, guid: e2f3fb9035f91e04794e12f1827409f8, type: 2}
   spikeMaterial: {fileID: 6200000, guid: 05b7d41b7a3fb3f4f95ae9045fdd7c6c, type: 2}
   jumpLayers:
@@ -189,7 +191,7 @@ GameObject:
   - component: {fileID: 1230678159061510645}
   - component: {fileID: 1230678159061510644}
   - component: {fileID: 4800252176221240287}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: SpikeForm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -277,3 +279,63 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.75
+--- !u!1 &6261130753895443077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618219351976722764}
+  - component: {fileID: 4307287062288299322}
+  - component: {fileID: 3008390386084806214}
+  m_Layer: 12
+  m_Name: GrateDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &618219351976722764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261130753895443077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1230678158645469258}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4307287062288299322
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261130753895443077}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.78
+--- !u!114 &3008390386084806214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261130753895443077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c709b5c988722c4aaefbd529094be71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

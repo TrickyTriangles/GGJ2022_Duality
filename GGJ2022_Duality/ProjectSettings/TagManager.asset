@@ -16,10 +16,10 @@ TagManager:
   - Player
   - Enemy
   - Terrain
-  - 
-  - 
-  - 
-  - 
+  - Grate
+  - Spike
+  - Detector
+  - Particle
   - 
   - 
   - 
