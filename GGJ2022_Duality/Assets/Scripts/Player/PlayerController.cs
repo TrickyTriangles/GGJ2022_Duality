@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public boolean TakeHit()
+    public bool TakeHit()
     {
         if (state == PlayerState.JELLY) {
             // take damage or die
