@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JuiceboxVampire : MonoBehaviour
+public class JuiceboxVampire : MonoBehaviour, ICollisionHandler
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,14 @@ public class JuiceboxVampire : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CollisionEnter(string colliderName, GameObject other)
+    {
+        if (colliderName == "DamageArea" && other.tag == "Player")
+        {
+            Debug.Log("Juicebox Vampire triggered with player");
+            other.GetComponent<PlayerController>().TakeHit();
+        }
     }
 }

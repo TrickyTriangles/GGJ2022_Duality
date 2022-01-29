@@ -118,6 +118,15 @@ public class PlayerController : MonoBehaviour
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
     }
 
+    public void TakeHit()
+    {
+        if (state == PlayerState.JELLY) {
+            // take damage
+        } else {
+            // do damage
+        }
+    }
+
     private void OnDestroy()
     {
         Unsubscribe_CollidedWithSurface(UpdateLastHitPosition);
