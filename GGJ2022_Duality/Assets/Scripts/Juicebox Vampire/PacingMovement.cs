@@ -18,7 +18,7 @@ public class PacingMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
 
         if (transform.position == positions[index]) {
-            if (index == positions.length - 1) {
+            if (index == positions.Length - 1) {
                 index = 0;
             } else {
                 index++;
