@@ -98,11 +98,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
-    }
-
+    
     private void OnCollisionStay2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
@@ -121,10 +117,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
-    }
 
     public void TakeHit()
     {
