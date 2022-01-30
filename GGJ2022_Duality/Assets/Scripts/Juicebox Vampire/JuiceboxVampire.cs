@@ -37,6 +37,7 @@ public class JuiceboxVampire : MonoBehaviour, ICollisionHandler
                 Debug.Log("Juicebox dies");
                 animator.TryPlayAnimation("Juicebox_Die");
                 isAlive = false;
+                GetComponent<PacingMovement>().enabled = false;
             } else {
                 animator.TryPlayAnimation("Juicebox_Attack");
             }
