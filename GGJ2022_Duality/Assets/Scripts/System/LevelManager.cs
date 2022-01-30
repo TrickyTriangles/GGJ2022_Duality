@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         GameManager.instance.StartGame();
+        AudioManager.PlayMusic("13 Retirement Song - Chiptune", 0.2f);
     }
 
     private void Update()

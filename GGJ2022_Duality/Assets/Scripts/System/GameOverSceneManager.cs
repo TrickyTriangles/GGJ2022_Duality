@@ -75,6 +75,7 @@ public class GameOverSceneManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1f;
+        AudioManager.StopMusic();
         SceneManager.LoadScene(0);
     }    
 }

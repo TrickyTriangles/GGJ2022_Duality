@@ -325,12 +325,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48343120b9aec63429fd511385aeaa4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
   myRigidbody: {fileID: 3575406231914234643}
   jellyForm: {fileID: 1230678157775416113}
   spikeForm: {fileID: 1230678159061510650}
   mainCollider: {fileID: 5560666279567707774}
   spikeCollider: {fileID: 4800252176221240287}
   grateDetector: {fileID: 3008390386084806214}
+  jellyAnimator: {fileID: 0}
   moveForce: 400
   jumpForce: 400
   jellyMaterial: {fileID: 6200000, guid: e2f3fb9035f91e04794e12f1827409f8, type: 2}
@@ -347,7 +349,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1230678158645469259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d3e2b1d11294b4ca98c4414a92a01f, type: 3}
+  m_Script: {fileID: 11500000, guid: 18b6015facd58454ab62e7dc51665f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3615742500317451593}
@@ -355,6 +357,7 @@ MonoBehaviour:
   velocityThreshold: 5
   jellyParticleSmall: {fileID: 2972086453244038549, guid: e638ce124869b29499d137f635a93af6, type: 3}
   jellySmallVelocityThreshold: 2
+  deathParticle: {fileID: 2972086453244038549, guid: a821b786aceaaad43aa63c7f18766798, type: 3}
 --- !u!1 &1230678159061510650
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,6 +45,7 @@ public class WinSceneManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
 
+        AudioManager.StopMusic();
         SceneManager.LoadScene(0);
     }
 }
