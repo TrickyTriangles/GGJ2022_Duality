@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     private enum PlayerState { JELLY, SPIKE }
 
+    [Header("Game State")]
+    [SerializeField] private LevelManager levelManager;
+
     [Header("Player Components")]
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private GameObject jellyForm;

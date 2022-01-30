@@ -22,4 +22,14 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    public void Win()
+    {
+        GameManager.instance.LoseGame();
+    }
+
+    public void Lose()
+    {
+        GameManager.instance.WinGame();
+    }
 }

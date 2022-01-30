@@ -1578,6 +1578,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4645672574611358266, guid: 1159ed593ad2e684487fdc39deac57ab, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1762177304}
     - target: {fileID: 4645672574945117146, guid: 1159ed593ad2e684487fdc39deac57ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6741,6 +6745,10 @@ PrefabInstance:
       propertyPath: m_Distance
       value: 0.34671423
       objectReference: {fileID: 0}
+    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1762177304}
     - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: jumpLayers.m_Bits
       value: 512
