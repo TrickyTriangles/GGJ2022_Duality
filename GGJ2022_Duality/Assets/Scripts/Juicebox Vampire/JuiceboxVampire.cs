@@ -22,12 +22,6 @@ public class JuiceboxVampire : MonoBehaviour, ICollisionHandler
         animator.AddAnimations(animations);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void CollisionEnter(string colliderName, GameObject other)
     {
         if (isAlive && colliderName == "DamageArea" && other.tag == "Player")
