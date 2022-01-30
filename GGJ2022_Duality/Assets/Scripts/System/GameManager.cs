@@ -41,4 +41,17 @@ public class GameManager: MonoBehaviour
     {
         isPaused = false;
     }
+
+    public void WinGame()
+    {
+        Debug.Log("Player has won");
+        // Show win screen/effects and go to menu
+    }
+
+    public void LoseGame()
+    {
+        Debug.Log("Player has lost");
+        // Show lose screen/effects and go to menu
+    }
+
 }

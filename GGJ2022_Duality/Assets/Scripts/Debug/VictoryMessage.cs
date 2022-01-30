@@ -5,10 +5,10 @@ using TMPro;
 public class VictoryMessage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] private VictoryTrigger trigger;
+    [SerializeField] private GameStateTrigger trigger;
     [SerializeField] private float timeToFade = 1f;
 
-    public void VictoryTrigger_PlayerWon()
+    public void GameStateTrigger_PlayerWon()
     {
         StartCoroutine(FadeInTextRoutine());
     }
