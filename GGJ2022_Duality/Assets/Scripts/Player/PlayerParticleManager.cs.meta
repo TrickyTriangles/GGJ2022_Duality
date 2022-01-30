@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GGJ2022_Duality/Assets/Scripts/System/AnyStateAnimation.cs.meta
+guid: 18b6015facd58454ab62e7dc51665f3d
+=======
 guid: 25d3e2b1d11294b4ca98c4414a92a01f
+>>>>>>> main:GGJ2022_Duality/Assets/Scripts/Player/PlayerParticleManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

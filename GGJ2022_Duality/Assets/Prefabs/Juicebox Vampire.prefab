@@ -85,9 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7224945480677005603}
+  - component: {fileID: 1965071722}
   - component: {fileID: 7224945480677005602}
   - component: {fileID: 1965071723}
-  - component: {fileID: 1965071722}
   m_Layer: 8
   m_Name: Juicebox Vampire
   m_TagString: Untagged
@@ -111,6 +111,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965071722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224945480677005612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc014327a3b86e41880238cea75bbe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1915560640}
 --- !u!114 &7224945480677005602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,18 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1965071722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7224945480677005612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc014327a3b86e41880238cea75bbe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7224945480855230469
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,8 +171,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7224945480855230468}
   - component: {fileID: 7224945480855230491}
+  - component: {fileID: 1915560638}
+  - component: {fileID: 1915560640}
   m_Layer: 8
-  m_Name: Temp Juicebox Vampire Sprite
+  m_Name: Juicebox Vampire Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,8 +188,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7224945480855230469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003200531, y: 0.18, z: 0}
-  m_LocalScale: {x: 1.9761904, y: 2.989204, z: 1}
+  m_LocalPosition: {x: -0.1107, y: 0.4622, z: 0}
+  m_LocalScale: {x: 3.2976265, y: 3.57718, z: 1.1967}
   m_Children: []
   m_Father: {fileID: 7224945480677005603}
   m_RootOrder: 0
@@ -231,8 +234,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: dd4a89ecb6f03b74da639a81857146a6, type: 3}
-  m_Color: {r: 0.49056602, g: 0.044737104, b: 0.17326641, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3f37e4a07030171488626438434f5ebf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -242,3 +245,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1915560638
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224945480855230469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 028f54225102d3c4ea51a8947065d1f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1915560640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7224945480855230469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47db653341c5fa43972f59e433ca0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
