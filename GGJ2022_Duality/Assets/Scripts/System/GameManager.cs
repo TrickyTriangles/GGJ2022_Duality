@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,14 @@ public class GameManager: MonoBehaviour
 
     private bool gameHasConcluded;
     public bool hasConcluded => gameHasConcluded;
+
+    #region Delegates
+
+    private Action GameLost;
+    public void Subscribe_GameLost(Action sub) { GameLost += sub; }
+    public void Unsubscribe_GameLost(Action sub) { GameLost -= sub; }
+
+    #endregion
 
     private void Awake()
     {
@@ -59,6 +68,7 @@ public class GameManager: MonoBehaviour
     {
         if (!gameHasConcluded)
         {
+            GameLost?.Invoke();
             gameHasConcluded = true;
             SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
         }

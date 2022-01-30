@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("What layers the raycast performed while jumping will detect.")]
     [SerializeField] private LayerMask jumpLayers;
 
+    private bool hasDied = false;
+
     #region Delegates and Subscriber Methods
 
     private Action<Vector3> CollidedWithSurface;
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        GameManager.instance.Subscribe_GameLost(Kill);
         Subscribe_CollidedWithSurface(UpdateLastHitPosition);
         jellyForm?.SetActive(true);
         spikeForm?.SetActive(false);
@@ -154,13 +157,18 @@ public class PlayerController : MonoBehaviour
 
     public void Kill()
     {
-        OnDeath?.Invoke();
-        Destroy(gameObject);
-        levelManager.Lose();
+        if (!hasDied)
+        {
+            hasDied = true;
+            OnDeath?.Invoke();
+            levelManager.Lose();
+            Destroy(gameObject);
+        }
     }
 
     private void OnDestroy()
     {
+        GameManager.instance.Unsubscribe_GameLost(Kill);
         Unsubscribe_CollidedWithSurface(UpdateLastHitPosition);
     }
 }

@@ -51,6 +51,7 @@ MonoBehaviour:
   bgm_folder: BGM
   bgm_filenames:
   - 78_Somber
+  - 13 Retirement Song - Chiptune
   sfx_volume: 1
   bgm_volume: 1
 --- !u!82 &5424559770853435594
