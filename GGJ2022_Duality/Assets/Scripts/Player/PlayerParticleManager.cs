@@ -5,17 +5,22 @@ using UnityEngine;
 public class PlayerParticleManager : MonoBehaviour
 {
     [SerializeField] private PlayerController player;
+
+    [Header("Jelly Form Particles")]
     [SerializeField] private GameObject jellyParticle;
     [SerializeField] private float velocityThreshold = 5f;
-
     [SerializeField] private GameObject jellyParticleSmall;
     [SerializeField] private float jellySmallVelocityThreshold = 2f;
+
+    [Header("Other Particles")]
+    [SerializeField] private GameObject deathParticle;
 
     private void Start()
     {
         if (player != null)
         {
             player.Subscribe_ActivateJellyParticle(PlayerController_ActivateJellyParticle);
+            player.Subscribe_OnDeath(PlayerController_OnDeath);
         }
     }
 
@@ -42,11 +47,20 @@ public class PlayerParticleManager : MonoBehaviour
         }
     }
 
+    private void PlayerController_OnDeath()
+    {
+        if (deathParticle != null)
+        {
+            Instantiate(deathParticle, transform.position, Quaternion.identity);
+        }
+    }
+
     private void OnDestroy()
     {
         if (player != null)
         {
             player.Unsubscribe_ActivateJellyParticle(PlayerController_ActivateJellyParticle);
+            player.Unsubscribe_OnDeath(PlayerController_OnDeath);
         }
     }
 }
