@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
         if (spikeCollider != null)
         {
             Vector2 direction = lastHitPosition - transform.position;
-            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.15f;
+            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.25f;
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {

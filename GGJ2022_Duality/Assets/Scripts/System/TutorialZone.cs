@@ -9,18 +9,24 @@ public class TutorialZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (tutorialTextObject != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            tutorialTextObject.EnteredTutorialZone();
-            tutorialTextObject.ChangeMessage(message);
-        }
+            if (tutorialTextObject != null)
+            {
+                tutorialTextObject.EnteredTutorialZone();
+                tutorialTextObject.ChangeMessage(message);
+            }
+        }  
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (tutorialTextObject != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            tutorialTextObject.ExitedTutorialZone();
-        }
+            if (tutorialTextObject != null)
+            {
+                tutorialTextObject.ExitedTutorialZone();
+            }
+        }      
     }
 }
