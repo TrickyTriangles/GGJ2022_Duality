@@ -10,7 +10,7 @@ public class PacingMovement : MonoBehaviour
     [SerializeField]
     private Vector3[] positions;
 
-    private int index;
+    private int index = 0;
 
     // Update is called once per frame
     void Update()
