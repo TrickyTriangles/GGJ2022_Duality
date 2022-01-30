@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        myRigidbody.AddForce(inputs.normalized * moveForce * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
