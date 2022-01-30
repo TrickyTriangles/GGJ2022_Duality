@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private enum PlayerState { JELLY, SPIKE }
 
     [Header("Player Components")]
-    [SerializeField] private List<Rigidbody2D> rigidbodies;
+    [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private GameObject jellyForm;
     [SerializeField] private GameObject spikeForm;
     [SerializeField] private CircleCollider2D mainCollider;
@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     public void Subscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface += sub; }
     public void Unsubscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface -= sub; }
 
+    private Action<Collision2D, float> ActivateJellyParticle;
+    public void Subscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle += sub; }
+    public void Unsubscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle -= sub; }
+
     #endregion
 
     private void Start()
@@ -51,11 +55,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        foreach (var rb in rigidbodies)
-        {
-            rb.AddForce(inputs * moveForce * Time.deltaTime);
-        }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             HandleJump(); 
@@ -64,14 +63,6 @@ public class PlayerController : MonoBehaviour
         if (!grateDetector.isTouchingGrate)
         {
             HandleFormChange();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            for (int i = 1; i < rigidbodies.Count; i++)
-            {
-                rigidbodies[i].velocity = rigidbodies[0].velocity;
-            }
         }
     }
 
@@ -82,7 +73,7 @@ public class PlayerController : MonoBehaviour
             state = PlayerState.SPIKE;
             jellyForm.SetActive(false);
             spikeForm.SetActive(true);
-            rigidbodies[0].sharedMaterial = spikeMaterial;
+            myRigidbody.sharedMaterial = spikeMaterial;
             gameObject.layer = LayerMask.NameToLayer("Spike");
         }
         else
@@ -90,7 +81,7 @@ public class PlayerController : MonoBehaviour
             state = PlayerState.JELLY;
             jellyForm.SetActive(true);
             spikeForm.SetActive(false);
-            rigidbodies[0].sharedMaterial = jellyMaterial;
+            myRigidbody.sharedMaterial = jellyMaterial;
             gameObject.layer = LayerMask.NameToLayer("Player");
         }
     }
@@ -104,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {
-                rigidbodies[0].AddForce(-direction.normalized * jumpForce);
+                myRigidbody.AddForce(-direction.normalized * jumpForce);
             }
         }
     }
@@ -112,6 +103,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+        ActivateJellyParticle?.Invoke(collision, myRigidbody.velocity.magnitude);
     }
 
     private void OnCollisionStay2D(Collision2D collision)

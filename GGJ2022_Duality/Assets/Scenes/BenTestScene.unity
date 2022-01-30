@@ -196,101 +196,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 28125591, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.14081326
-      objectReference: {fileID: 0}
-    - target: {fileID: 215859529, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.13323194
-      objectReference: {fileID: 0}
-    - target: {fileID: 215859529, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.320092
-      objectReference: {fileID: 0}
-    - target: {fileID: 228909052, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.33491722
-      objectReference: {fileID: 0}
-    - target: {fileID: 772853698, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.16431464
-      objectReference: {fileID: 0}
-    - target: {fileID: 772853698, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.3140698
-      objectReference: {fileID: 0}
-    - target: {fileID: 914800466, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.17364198
-      objectReference: {fileID: 0}
-    - target: {fileID: 914800466, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.31800896
-      objectReference: {fileID: 0}
-    - target: {fileID: 1124611514, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.13071993
-      objectReference: {fileID: 0}
-    - target: {fileID: 1769259963, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.33269173
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100183800, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.12198018
-      objectReference: {fileID: 0}
-    - target: {fileID: 2100183800, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.32451665
-      objectReference: {fileID: 0}
-    - target: {fileID: 211224278762072360, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.35110465
-      objectReference: {fileID: 0}
-    - target: {fileID: 211224278762072360, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 211224278762072360, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 356332134083597818, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.35445613
-      objectReference: {fileID: 0}
-    - target: {fileID: 356332134083597818, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 356332134083597818, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 946815725803927195, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 946815725803927195, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.12198018
-      objectReference: {fileID: 0}
-    - target: {fileID: 946815725803927195, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.32451665
-      objectReference: {fileID: 0}
     - target: {fileID: 1230678158645469258, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1230678158645469258, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.960249
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 1230678158645469258, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.0176244
+      value: 2.03
       objectReference: {fileID: 0}
     - target: {fileID: 1230678158645469258, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: m_LocalPosition.z
@@ -327,310 +243,6 @@ PrefabInstance:
     - target: {fileID: 1230678158645469259, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341135773141592040, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.4680614
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341135773141592040, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1341135773141592040, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708755100281953023, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.45715207
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708755100281953023, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708755100281953023, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718632879619964892, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.46404666
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718632879619964892, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1718632879619964892, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960796019876994141, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.35849267
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960796019876994141, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960796019876994141, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505873439202754519, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505873439202754519, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.0011315346
-      objectReference: {fileID: 0}
-    - target: {fileID: 2505873439202754519, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2850115961694997871, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.46805045
-      objectReference: {fileID: 0}
-    - target: {fileID: 2850115961694997871, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2850115961694997871, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940667142232897910, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2940667142232897910, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.14081326
-      objectReference: {fileID: 0}
-    - target: {fileID: 2969744055048000171, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.34671262
-      objectReference: {fileID: 0}
-    - target: {fileID: 2969744055048000171, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2969744055048000171, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[1]
-      value: 
-      objectReference: {fileID: 1154572941}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[2]
-      value: 
-      objectReference: {fileID: 961397758}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[3]
-      value: 
-      objectReference: {fileID: 1568732865}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[4]
-      value: 
-      objectReference: {fileID: 410591676}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[5]
-      value: 
-      objectReference: {fileID: 521096487}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[6]
-      value: 
-      objectReference: {fileID: 1112380226}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[7]
-      value: 
-      objectReference: {fileID: 1124133011}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[8]
-      value: 
-      objectReference: {fileID: 954686143}
-    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: rigidbodies.Array.data[9]
-      value: 
-      objectReference: {fileID: 1019707809}
-    - target: {fileID: 3747991176814501944, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.4680448
-      objectReference: {fileID: 0}
-    - target: {fileID: 3747991176814501944, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3747991176814501944, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885293403066116703, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 3.5821435
-      objectReference: {fileID: 0}
-    - target: {fileID: 4428023035111415404, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4428023035111415404, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.12386248
-      objectReference: {fileID: 0}
-    - target: {fileID: 4428023035111415404, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.3335892
-      objectReference: {fileID: 0}
-    - target: {fileID: 5847138259774122684, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.3563796
-      objectReference: {fileID: 0}
-    - target: {fileID: 5847138259774122684, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5847138259774122684, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852099193793460730, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852099193793460730, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.13125132
-      objectReference: {fileID: 0}
-    - target: {fileID: 5852099193793460730, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.32926002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229324307293941707, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.45711708
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229324307293941707, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229324307293941707, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868848542230962671, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.4571857
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868848542230962671, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868848542230962671, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7535521056931746073, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7535521056931746073, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.13521263
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687506195793246541, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.36232755
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687506195793246541, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687506195793246541, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747733386444239706, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 3.5821435
-      objectReference: {fileID: 0}
-    - target: {fileID: 7844032128997610887, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7844032128997610887, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.121620275
-      objectReference: {fileID: 0}
-    - target: {fileID: 7844032128997610887, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.3246816
-      objectReference: {fileID: 0}
-    - target: {fileID: 7895484640957767104, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7895484640957767104, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.13524005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7895484640957767104, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.33614165
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204277483343850472, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.35584217
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204277483343850472, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204277483343850472, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047618721657166878, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047618721657166878, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.122595266
-      objectReference: {fileID: 0}
-    - target: {fileID: 9047618721657166878, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.3368789
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163563718825551362, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.3563796
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163563718825551362, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9163563718825551362, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175928538558375608, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Distance
-      value: 0.4594022
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175928538558375608, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_Frequency
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9175928538558375608, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-      propertyPath: m_DampingRatio
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
@@ -733,19 +345,9 @@ MonoBehaviour:
   target: {fileID: 459357419}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -10}
---- !u!50 &410591676 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3577973935370087246, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &459357419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1230678158645469258, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &521096487 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6218294856560203408, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
   m_PrefabInstance: {fileID: 154119559}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &816752364 stripped
@@ -1090,21 +692,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &954686143 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5509399954963022921, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &961397758 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3532298975016179997, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1019707809 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5923447782446272643, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1024360246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,16 +722,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1112380226 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7809377883059466326, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1124133011 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 351265258102647737, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1127171888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,11 +872,6 @@ MonoBehaviour:
   text: {fileID: 1127171890}
   trigger: {fileID: 816752364}
   timeToFade: 1
---- !u!50 &1154572941 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 8712691569052945246, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1180261559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,11 +1002,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1568732865 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 6600730299255216874, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
-  m_PrefabInstance: {fileID: 154119559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661792072
 GameObject:
   m_ObjectHideFlags: 0
