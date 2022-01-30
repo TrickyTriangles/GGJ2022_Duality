@@ -10,6 +10,9 @@ public class GameManager: MonoBehaviour
     private bool isPaused;
     public bool IsPaused => isPaused;
 
+    private bool gameHasConcluded;
+    public bool hasConcluded => gameHasConcluded;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,12 +28,13 @@ public class GameManager: MonoBehaviour
 
     public void StartGame()
     {
+        gameHasConcluded = false;
         isPaused = false;
     }
 
     public void PauseGame()
     {
-        if (!isPaused)
+        if (!isPaused && !gameHasConcluded)
         {
             isPaused = true;
             SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
@@ -44,14 +48,20 @@ public class GameManager: MonoBehaviour
 
     public void WinGame()
     {
-        Debug.Log("Player has won");
-        // Show win screen/effects and go to menu
+        if (!gameHasConcluded)
+        {
+            gameHasConcluded = true;
+            SceneManager.LoadScene("GameWinScene", LoadSceneMode.Additive);
+        }
     }
 
     public void LoseGame()
     {
-        Debug.Log("Player has lost");
-        // Show lose screen/effects and go to menu
+        if (!gameHasConcluded)
+        {
+            gameHasConcluded = true;
+            SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
+        }
     }
 
 }
