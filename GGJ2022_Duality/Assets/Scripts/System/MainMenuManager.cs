@@ -47,18 +47,18 @@ public class MainMenuManager : MonoBehaviour
         Color backgroundColor = background.color;
         float timer = 0f;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
-        while (timer < 2f)
+        while (timer < 1f)
         {
             timer += Time.deltaTime;
-            float ratio = timer / 2f;
+            float ratio = timer / 1f;
 
             background.color = Color.Lerp(backgroundColor, Color.black, ratio);
             yield return null;
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(gameScene);
     }
