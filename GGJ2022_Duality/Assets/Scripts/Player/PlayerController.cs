@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
     public bool TakeHit()
     {
         if (state == PlayerState.JELLY) {
-            // take damage or die
+            Kill();
             return true;
         } else {
             // do damage
@@ -156,6 +156,7 @@ public class PlayerController : MonoBehaviour
     {
         OnDeath?.Invoke();
         Destroy(gameObject);
+        levelManager.Lose();
     }
 
     private void OnDestroy()

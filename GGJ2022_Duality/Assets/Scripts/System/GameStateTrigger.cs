@@ -27,6 +27,7 @@ public class GameStateTrigger : MonoBehaviour
                         break;
                     default:
                         Debug.Log("No state selected");
+                        break;
                 }
             }
         }

@@ -25,11 +25,11 @@ public class LevelManager : MonoBehaviour
 
     public void Win()
     {
-        GameManager.instance.LoseGame();
+        GameManager.instance.WinGame();
     }
 
     public void Lose()
     {
-        GameManager.instance.WinGame();
+        GameManager.instance.LoseGame();
     }
 }
