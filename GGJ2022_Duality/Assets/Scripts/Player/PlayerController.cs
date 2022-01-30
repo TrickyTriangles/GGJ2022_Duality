@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CircleCollider2D mainCollider;
     [SerializeField] private CircleCollider2D spikeCollider;
     [SerializeField] private GrateDetector grateDetector;
-    [SerializeField] private Animator jellyAnimator;
+    [SerializeField] private AnyStateAnimator jellyAnimator;
 
     [Header("Game Values")]
     [SerializeField] private float moveForce = 100f;
