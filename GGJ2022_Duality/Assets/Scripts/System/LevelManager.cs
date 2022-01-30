@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    private void Start()
+    {
+        GameManager.instance.StartGame();
+    }
+
     private void Update()
     {
         if (GameManager.instance != null)
