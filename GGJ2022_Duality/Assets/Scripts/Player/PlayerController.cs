@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     public void Subscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface += sub; }
     public void Unsubscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface -= sub; }
 
+    private Action<Collision2D, float> ActivateJellyParticle;
+    public void Subscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle += sub; }
+    public void Unsubscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle -= sub; }
+
     #endregion
 
     private void Start()
@@ -99,6 +103,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+        ActivateJellyParticle?.Invoke(collision, myRigidbody.velocity.magnitude);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
