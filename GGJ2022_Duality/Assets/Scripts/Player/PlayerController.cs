@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviour
     public void Subscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle += sub; }
     public void Unsubscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle -= sub; }
 
+    private Action OnDeath;
+    public void Subscribe_OnDeath(Action sub) { OnDeath += sub; }
+    public void Unsubscribe_OnDeath(Action sub) { OnDeath -= sub; }
+
     #endregion
 
     private void Start()
@@ -65,6 +69,11 @@ public class PlayerController : MonoBehaviour
         if (!grateDetector.isTouchingGrate)
         {
             HandleFormChange();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Kill();
         }
     }
 
@@ -135,6 +144,12 @@ public class PlayerController : MonoBehaviour
             // do damage
             return false;
         }
+    }
+
+    public void Kill()
+    {
+        OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 
     private void OnDestroy()
