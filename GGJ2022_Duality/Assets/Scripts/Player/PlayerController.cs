@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private enum PlayerState { JELLY, SPIKE }
 
     [Header("Player Components")]
-    [SerializeField] private Rigidbody2D myRigidbody;
+    [SerializeField] private List<Rigidbody2D> rigidbodies;
     [SerializeField] private GameObject jellyForm;
     [SerializeField] private GameObject spikeForm;
     [SerializeField] private CircleCollider2D mainCollider;
@@ -51,7 +51,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        myRigidbody?.AddForce(inputs * moveForce * Time.deltaTime);
+        foreach (var rb in rigidbodies)
+        {
+            rb.AddForce(inputs * moveForce * Time.deltaTime);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -62,6 +65,14 @@ public class PlayerController : MonoBehaviour
         {
             HandleFormChange();
         }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            for (int i = 1; i < rigidbodies.Count; i++)
+            {
+                rigidbodies[i].velocity = rigidbodies[0].velocity;
+            }
+        }
     }
 
     private void HandleFormChange()
@@ -71,7 +82,7 @@ public class PlayerController : MonoBehaviour
             state = PlayerState.SPIKE;
             jellyForm.SetActive(false);
             spikeForm.SetActive(true);
-            myRigidbody.sharedMaterial = spikeMaterial;
+            rigidbodies[0].sharedMaterial = spikeMaterial;
             gameObject.layer = LayerMask.NameToLayer("Spike");
         }
         else
@@ -79,7 +90,7 @@ public class PlayerController : MonoBehaviour
             state = PlayerState.JELLY;
             jellyForm.SetActive(true);
             spikeForm.SetActive(false);
-            myRigidbody.sharedMaterial = jellyMaterial;
+            rigidbodies[0].sharedMaterial = jellyMaterial;
             gameObject.layer = LayerMask.NameToLayer("Player");
         }
     }
@@ -89,16 +100,20 @@ public class PlayerController : MonoBehaviour
         if (spikeCollider != null)
         {
             Vector2 direction = lastHitPosition - transform.position;
-            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.05f;
+            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.15f;
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {
-                myRigidbody?.AddForce(-direction.normalized * jumpForce);
+                rigidbodies[0].AddForce(-direction.normalized * jumpForce);
             }
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
@@ -116,7 +131,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
 
     public void TakeHit()
     {
