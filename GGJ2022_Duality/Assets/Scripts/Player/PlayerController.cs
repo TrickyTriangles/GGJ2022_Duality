@@ -58,22 +58,25 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        myRigidbody.AddForce(inputs.normalized * moveForce * Time.deltaTime);
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!GameManager.instance.IsPaused)
         {
-            HandleJump(); 
-        }
+            Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            myRigidbody.AddForce(inputs.normalized * moveForce * Time.deltaTime);
 
-        if (!grateDetector.isTouchingGrate)
-        {
-            HandleFormChange();
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                HandleJump();
+            }
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Kill();
+            if (!grateDetector.isTouchingGrate)
+            {
+                HandleFormChange();
+            }
+
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                Kill();
+            }
         }
     }
 

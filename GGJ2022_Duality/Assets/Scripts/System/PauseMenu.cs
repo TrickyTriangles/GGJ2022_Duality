@@ -41,7 +41,8 @@ public class PauseMenu : MonoBehaviour
                 {
                     // Continue
                     Time.timeScale = 1f;
-                    SceneManager.UnloadSceneAsync("PauseScene");
+                    SceneManager.UnloadSceneAsync("PauseMenu");
+                    GameManager.instance.UnpauseGame();
                 }
                 else if (selection == 1)
                 {
@@ -52,17 +53,25 @@ public class PauseMenu : MonoBehaviour
                 hasChosen = true;
             }
 
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                // Exit menu regardless of choice
+                Time.timeScale = 1f;
+                SceneManager.UnloadSceneAsync("PauseMenu");
+                GameManager.instance.UnpauseGame();
+            }
+
             if (Input.GetAxisRaw("Vertical") > 0f && !hasMoved)
             {
                 hasMoved = true;
                 selection += 1;
-                selection %= 2;
+                selection = Mathf.Abs(selection % 2);
             }
             else if (Input.GetAxisRaw("Vertical") < 0f && !hasMoved)
             {
                 hasMoved = true;
                 selection -= 1;
-                selection %= 2;
+                selection = Mathf.Abs(selection % 2);
             }
 
             if (Input.GetAxisRaw("Vertical") == 0f)
