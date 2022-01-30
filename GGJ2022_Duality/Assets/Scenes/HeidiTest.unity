@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3615742500317451593, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
+      propertyPath: jellyAnimator
+      value: 
+      objectReference: {fileID: 391972851}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cf91f867e5ddd40b1f60b1b3f50826, type: 3}
 --- !u!1 &391972847 stripped
@@ -298,6 +302,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &391972851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391972847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47db653341c5fa43972f59e433ca0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &832406348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,11 +538,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1877641336150021581, guid: 90d86e04d6b0dca4397dda52f1a6fdf0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5958
+      value: -5.56
       objectReference: {fileID: 0}
     - target: {fileID: 1877641336150021581, guid: 90d86e04d6b0dca4397dda52f1a6fdf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.6408
+      value: -4.71
       objectReference: {fileID: 0}
     - target: {fileID: 1877641336150021581, guid: 90d86e04d6b0dca4397dda52f1a6fdf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -718,6 +734,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1915560636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7224945480855230469, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+  m_PrefabInstance: {fileID: 7224945481534768203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1915560640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915560636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47db653341c5fa43972f59e433ca0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2021377715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,6 +827,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1965071722, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1915560640}
     - target: {fileID: 7224945480677005603, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -842,5 +879,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Juicebox Vampire
       objectReference: {fileID: 0}
+    - target: {fileID: 7224945480855230468, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2976265
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224945480855230468, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.57718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224945480855230468, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1107
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224945480855230468, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4622
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224945480855230491, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f37e4a07030171488626438434f5ebf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bac1bc4a1ef524598ef8b3b9c28424, type: 3}
