@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
     public void Subscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface += sub; }
     public void Unsubscribe_CollidedWithSurface(Action<Vector3> sub) { CollidedWithSurface -= sub; }
 
+    private Action<Collision2D, float> ActivateJellyParticle;
+    public void Subscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle += sub; }
+    public void Unsubscribe_ActivateJellyParticle(Action<Collision2D, float> sub) { ActivateJellyParticle -= sub; }
+
     #endregion
 
     private void Start()
@@ -51,8 +55,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Vector2 inputs = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        myRigidbody?.AddForce(inputs * moveForce * Time.deltaTime);
+        myRigidbody.AddForce(inputs.normalized * moveForce * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -90,11 +93,11 @@ public class PlayerController : MonoBehaviour
         if (spikeCollider != null)
         {
             Vector2 direction = lastHitPosition - transform.position;
-            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.05f;
+            float radius = (spikeCollider.radius * spikeCollider.gameObject.transform.localScale.x) + 0.15f;
 
             if (Physics2D.Raycast(transform.position, direction, radius, jumpLayers))
             {
-                myRigidbody?.AddForce(-direction.normalized * jumpForce);
+                myRigidbody.AddForce(-direction.normalized * jumpForce);
             }
         }
     }
@@ -102,6 +105,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         CollidedWithSurface?.Invoke(collision.GetContact(0).point);
+        ActivateJellyParticle?.Invoke(collision, myRigidbody.velocity.magnitude);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
